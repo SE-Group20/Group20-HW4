@@ -1,0 +1,15 @@
+# run as `cat titanic.csv | awk -f class.awk.kwilso24`
+BEGIN {
+    # comma separated
+    FS=","
+}
+# class is the third column
+{
+    classCount[$3]++
+}
+END {
+    # print class and count
+    for (c in classCount) {
+        print c, classCount[c]
+    }
+}

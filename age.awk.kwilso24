@@ -1,0 +1,21 @@
+# run as `cat titanic.csv | awk -f age.awk.kwilso24`
+BEGIN {
+    # comma separated
+    FS=","
+}
+{
+    # age is the sixth column
+    sum += $7
+    # print $7
+    # we need a count to divide by later
+    count++
+}
+END {
+    if (count > 0) {
+        # print avg age
+        print sum / count
+    } else {
+        # handle divide by zero
+        print 0
+    }
+}

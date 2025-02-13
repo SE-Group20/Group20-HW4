@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "All lines with banana"
+echo "$(cat sample.txt | grep banana)"
+echo
+
+echo "All lines without banana"
+# -v invert the match
+echo "$(cat sample.txt | grep -v banana)"
+echo
+
+echo "All unique lines"
+echo "$(cat sample.txt | sort | uniq)"
+echo
+
+echo "ALl unique lines with count"
+echo "$(cat sample.txt | sort | uniq -c)"
+echo
+
+echo "Number of lines with banana"
+echo "$(cat sample.txt | grep banana | wc -l)"
+
