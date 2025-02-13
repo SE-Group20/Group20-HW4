@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# run as `ps | bash infinite.sh.kwilso24`
+
 # read gets the piped input separated by newlines
 while IFS= read -r line; do
   # does this line contain " sh"?

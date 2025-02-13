@@ -1,3 +1,4 @@
+# run as `cat titanic.csv | awk -f live.awk.kwilso24`
 BEGIN {
     # comma separated
     FS = ","

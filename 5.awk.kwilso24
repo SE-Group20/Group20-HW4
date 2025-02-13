@@ -1,1 +1,2 @@
+# run as `cat titanic.csv | awk -f 5.awk.kwilso24`
 NR <= 5 { print }

@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# run as `sh infinite.sh.kwilso24`
 while :
 do
     sleep 1

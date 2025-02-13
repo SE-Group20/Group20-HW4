@@ -1,5 +1,6 @@
-# comma separated
+# run as `cat titanic.csv | awk -f age.awk.kwilso24`
 BEGIN {
+    # comma separated
     FS=","
 }
 {
