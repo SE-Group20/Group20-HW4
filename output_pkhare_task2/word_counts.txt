@@ -1,4 +1,0 @@
-   2 apple
-   3 banana
-   1 cherry
-   1 date
