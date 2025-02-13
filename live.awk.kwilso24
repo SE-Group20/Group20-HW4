@@ -1,0 +1,23 @@
+BEGIN {
+    # comma separated
+    FS = ","
+}
+{
+    # 2nd column is survival (0 or 1)
+    # 3rd column is passenger class
+    # print $2, $3
+    total[$3]++
+    survived[$3] += $2
+}
+END {
+    # for each class
+    for (c in total) {
+        # if there are any passengers in this class
+        if (total[c] > 0) {
+            print c, survived[c] / total[c]
+        } else {
+            # handle divide by zero
+            print c, 0
+        }
+    }
+}

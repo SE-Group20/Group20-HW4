@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# read gets the piped input separated by newlines
+while IFS= read -r line; do
+  # does this line contain " sh"?
+  if [[ "$line" == *" sh" ]]; then
+    # grab the first column
+    pid=$(echo "$line" | awk '{print $1}')
+    echo "$pid"
+    # exit
+    exit 0  
+  fi
+done
